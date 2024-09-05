@@ -773,23 +773,23 @@ require('lazy').setup({
     end,
   },
 
-  -- { -- You can easily change to a different colorscheme.
-  -- Change the name of the colorscheme plugin below, and then
-  -- change the command in the config to whatever the name of that colorscheme is.
-  --
-  -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  -- 'neczju/myalabaster.nvim',
-  -- priority = 1000, -- Make sure to load this before all the other start plugins.
-  -- init = function()
-  -- Load the colorscheme here.
-  -- Like many other themes, this one has different styles, and you could load
-  -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  -- vim.cmd.colorscheme 'alabaster'
-  -- You can configure highlights by doing something like:
-  -- vim.cmd.hi 'Comment gui=none'
-  -- vim.cmd.hi 'Normal guibg=none'
-  -- end,
-  -- },
+  { -- You can easily change to a different colorscheme.
+    -- Change the name of the colorscheme plugin below, and then
+    -- change the command in the config to whatever the name of that colorscheme is.
+    --
+    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+    'neczju/alabaster.nvim',
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    init = function()
+      -- Load the colorscheme here.
+      -- Like many other themes, this one has different styles, and you could load
+      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+      vim.cmd.colorscheme 'alabaster'
+      -- You can configure highlights by doing something like:
+      vim.cmd.hi 'Comment gui=none'
+      vim.cmd.hi 'Normal guibg=none'
+    end,
+  },
 
   -- diagflow.nvim diagnostics show on top-right corner
   { 'dgagn/diagflow.nvim', opts = {} },
@@ -800,12 +800,6 @@ require('lazy').setup({
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
-      -- mini.hues
-      require('mini.hues').setup {
-        background = '#151515',
-        foreground = '#c3c7d1',
-        saturation = 'medium',
-      }
       -- Better Around/Inside textobjects
       --
       -- Examples:
@@ -844,7 +838,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'c_sharp' },
+      ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'c_sharp', 'asm' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
