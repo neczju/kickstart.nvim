@@ -566,6 +566,7 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         -- gopls = {},
+        -- pylsp = {},
         pylsp = {},
         rust_analyzer = {},
         csharp_ls = {},
@@ -774,12 +775,12 @@ require('lazy').setup({
   },
 
   { -- colorscheme
-    'ellisonleao/gruvbox.nvim',
-    opts = { transparent_mode = true },
+    'aktersnurra/no-clown-fiesta.nvim',
+    opts = { transparent = true },
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load colorscheme
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'no-clown-fiesta'
     end,
   },
 
