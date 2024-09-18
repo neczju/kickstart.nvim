@@ -775,12 +775,12 @@ require('lazy').setup({
   },
 
   { -- colorscheme
-    'aktersnurra/no-clown-fiesta.nvim',
-    opts = { transparent = true },
+    'rebelot/kanagawa.nvim',
+    opts = { transparent = true, colors = { theme = { all = { ui = { bg_gutter = 'none' } } } } },
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load colorscheme
-      vim.cmd.colorscheme 'no-clown-fiesta'
+      vim.cmd.colorscheme 'kanagawa-dragon'
     end,
   },
 
