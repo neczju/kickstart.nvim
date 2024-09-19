@@ -567,7 +567,7 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         -- pylsp = {},
-        pylsp = {},
+        pyright = {},
         rust_analyzer = {},
         csharp_ls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -775,12 +775,12 @@ require('lazy').setup({
   },
 
   { -- colorscheme
-    'rebelot/kanagawa.nvim',
-    opts = { transparent = true, colors = { theme = { all = { ui = { bg_gutter = 'none' } } } } },
+    'EdenEast/nightfox.nvim',
+    opts = { options = { transparent = true } },
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load colorscheme
-      vim.cmd.colorscheme 'kanagawa-dragon'
+      vim.cmd.colorscheme 'carbonfox'
     end,
   },
 
