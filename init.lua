@@ -775,12 +775,12 @@ require('lazy').setup({
   },
 
   { -- colorscheme
-    'EdenEast/nightfox.nvim',
-    opts = { options = { transparent = true } },
+    'sainnhe/gruvbox-material',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load colorscheme
-      vim.cmd.colorscheme 'carbonfox'
+      vim.g.gruvbox_material_transparent_background = 1
+      vim.cmd.colorscheme 'gruvbox-material'
     end,
   },
 
